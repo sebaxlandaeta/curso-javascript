@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JS2 - Desafio 4</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Facturación de Productos</h1>
+    <form id="form">
+        <label>Precio:</label>
+        <input type="number" id="precio"><br><br>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cantidad"><br><br>
+
+        <label>Cuotas:</label>
+        <input type="number" id="cuotas"><br><br>
+
+        <label>Producto:</label>
+        <select id="productos">
+            <option value="Laptop">Laptop</option>
+            <option value="Telefono">Telefono</option>
+            <option value="Tablet">Tablet</option>
+            <option value="Televisor">Televisor</option>
+            <option value="Play Station">Play Station</option>
+        </select><br><br>
+
+        <label>Porcentaje de Inicial:</label>
+        <select id="porcInicial">
+            <option value="0.30">30%</option>
+            <option value="0.40">40%</option>
+            <option value="0.50">50%</option>
+        </select><br><br>
+
+        <button type="button" id="btnCalcular">CALCULAR</button>
+        <button type="button" id="btnFacturar" disabled>FACTURAR</button>
+    </form>
+    <hr>
+    <div id="resultado"></div>
+    <script src="./script.js"></script>
+</body>
+</html>
