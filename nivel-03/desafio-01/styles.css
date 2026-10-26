@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form br {
+    display: none;
+}
+
+form label, 
+form {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    color: #f8fafc;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 0.75rem;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+}
+
+form input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+#btnProcesar {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 0.5rem;
+}
+
+#btnProcesar:hover {
+    background-color: #7dd3fc;
+}
+
+#btnProcesar:active {
+    transform: scale(0.98);
+}
+
+hr {
+    width: 100%;
+    max-width: 800px;
+    border: none;
+    height: 1px;
+    background-color: #334155;
+    margin: 1rem 0 2rem 0;
+}
+
+#resultados {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#resultados article {
+    background-color: #1e293b;
+    color: #0f172a;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    width: 220px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;   
+    gap: 0.75rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#resultados article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+}
+
+#resultados article div:nth-child(1) {
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #090d16;
+}
+
+#resultados article div:nth-child(2) {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+#resultados article div:nth-child(2)::before {
+    content: "Precio: $";
+}
+
+#resultados article a {
+    width: 100%;
+    margin-top: 0.25rem;
+    color: #ffffff;
+    background-color: rgba(1, 32, 70, 0.85);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#resultados article a:hover {
+    background-color: rgba(15, 23, 42, 1);
+}
+
+#resultados article a:active {
+    transform: scale(0.96);
+}
