@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS3 - Desafio 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body class="bg-light min-vh-100 d-flex align-items-center py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white">
+          
+          <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark">Crear Cuenta</h2>
+            <p class="text-muted small">Completa los datos para registrarte en el sistema</p>
+          </div>
+
+          <form name="datos" action="" method="get">
+            
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" name="nombre" id="nombre" placeholder="Nombre y Apellido">
+              <label for="nombre">Nombre y Apellido</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control rounded-3" name="correo" id="correo" placeholder="Correo Electrónico">
+              <label for="correo">Correo Electrónico</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" name="telefono" id="telefono" placeholder="Teléfono">
+              <label for="telefono">Teléfono</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control rounded-3" name="clave" id="clave" placeholder="Contraseña">
+              <label for="clave">Contraseña</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control rounded-3" name="confirmacion" id="confirmacion" placeholder="Confirmación de la contraseña">
+              <label for="confirmacion">Confirmación de la contraseña</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <select class="form-select rounded-3" name="ciudad" id="ciudad" aria-label="Seleccione su ciudad">
+                <option value="0">Seleccione su ciudad</option>
+                <option value="1">Barquisimeto</option>
+                <option value="2">San Felipe</option>
+                <option value="3">Acarigua</option>
+                <option value="4">Valencia</option>
+                <option value="5">Maracaibo</option>
+              </select>
+              <label for="ciudad">Ciudad</label>
+            </div>
+
+            <div class="form-check form-switch mb-4 ps-5">
+              <input class="form-check-input fs-5" name="terminos" type="checkbox" role="switch" id="terminos" style="cursor: pointer;">
+              <label class="form-check-label pt-1" for="terminos" style="cursor: pointer;">Acepto los términos y servicios</label>
+            </div>
+
+            <div class="d-grid mb-3">
+              <button class="btn btn-success btn-lg rounded-3 fw-semibold py-3" type="submit">Registrarse</button>
+            </div>
+
+            <div id="error" class="d-none alert alert-danger mt-3 rounded-3 small py-2"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
