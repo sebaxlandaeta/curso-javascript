@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>JS3 - Desafio 2</title>
+</head>
+<body>
+    <header>
+        <h1>Ingrese los datos del vehiculo</h1>
+    </header>
+    <main>
+          <form name="datos">
+            <label>Placa</label>
+            <input name="placa" type="text"> <br>
+
+            <label>Kilometros</label>
+            <input name="km" type="number"> <br>
+
+            <label>Precio</label>
+            <input name="precio" type="number"> <br> <br>
+
+            <label>Marca</label>
+            <select name="marca">
+                <option value="Toyota">Toyota</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Changan">Changan</option>
+                <option value="Ford">Ford</option>  
+                <option value="Fiat">Fiat</option>       
+            </select>
+
+            <label>Modelo</label>
+            <select name="modelo"> <br>
+                <option value="Corolla">Corolla</option>
+                <option value="Hilux">Hilux</option>
+                <option value="Yaris">Yaris</option>
+                <option value="Tahoe">Tahoe</option>
+                <option value="Silverado">Silverado</option>
+                <option value="Corsa">Corsa</option>
+                <option value="Fiesta">Fiesta</option>
+                <option value="Explorer">Explorer</option>
+                <option value="Fastback">FastBack</option>
+                <option value="Pulse">Pulse</option>
+                <option value="Hunter">Hunter</option>
+                <option value="Alsvin">Alsvin</option>
+            </select> <br> <br>
+            
+            <label>Estado</label>
+            <label for="Nuevo">Nuevo</label>
+            <input name="estado" type="radio" value="Nuevo">
+        
+            <label for="Usado">Usado</label>
+            <input name="estado" type="radio" value="Usado">
+            <button type="button" id="btnAgregar" style="margin-left: 25px">Agregar</button>
+            <button id="btnLimpiar">Limpiar</button>
+        </form>
+        <hr>
+        <table border="1" id="datosSalida" width="700" style="text-align: center;">
+            <tr>
+                <th>Placa</th>
+                <th>Kilometros</th>
+                <th>Precio</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Estado</th>
+            </tr>
+        </table>
+        <div id="resultados">
+
+        </div>
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>

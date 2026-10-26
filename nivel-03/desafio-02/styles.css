@@ -1,0 +1,204 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0b0f19;
+    color: #f1f5f9;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabecera */
+header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: -0.025em;
+}
+
+/* Contenedor principal */
+main {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Formulario */
+form {
+    background-color: #111827;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    border: 1px solid #1f2937;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form br {
+    display: none;
+}
+
+form label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+}
+
+/* Inputs y selects */
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #030712;
+    border: 1px solid #374151;
+    border-radius: 0.50rem;
+    color: #f9fafb;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s ease;
+    margin-bottom: 0.25rem;
+}
+
+/* Quitar flechas numéricas */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+form input:focus,
+form select:focus {
+    background-color: #030712;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* Radio buttons */
+form input[type="radio"] {
+    accent-color: #3b82f6;
+    width: 1.1rem;
+    height: 1.1rem;
+    cursor: pointer;
+    margin-right: 0.35rem;
+}
+
+form label[for="Nuevo"], 
+form label[for="Usado"] {
+    display: inline;
+    text-transform: none;
+    font-weight: 500;
+    color: #d1d5db;
+    margin-right: 1.5rem;
+}
+
+/* Botones */
+form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#btnAgregar {
+    background-color: #3b82f6;
+    color: #ffffff;
+    margin-left: 0 !important;
+    margin-top: 1rem;
+}
+
+#btnAgregar:hover {
+    background-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+#btnLimpiar {
+    background-color: #1f2937;
+    color: #9ca3af;
+    margin-top: 0.5rem;
+}
+
+#btnLimpiar:hover {
+    background-color: #374151;
+    color: #f3f4f6;
+}
+
+form button:active {
+    transform: scale(0.98);
+}
+
+/* Separador */
+hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #1f2937;
+    margin: 2.5rem 0;
+}
+
+/* Tabla de resultados */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #111827;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    border: 1px solid #1f2937;
+    margin-top: 1rem;
+}
+
+table th, 
+table td {
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #1f2937;
+    text-align: center;
+    color: #e5e7eb;
+}
+
+table th {
+    background-color: #030712;
+    color: #9ca3af;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #1f2937;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover td {
+    background-color: rgba(31, 41, 55, 0.4);
+}
