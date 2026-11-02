@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS5 - Desafio 2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-slate-100 text-slate-800 dark:bg-black dark:text-zinc-100 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+  <header class="sticky top-0 z-50 bg-white/70 dark:bg-black/90 backdrop-blur-md border-b border-slate-200 dark:border-zinc-900 transition-colors duration-300">
+    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center">
+      <div class="flex items-center mx-4">
+        <span class="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
+          API-CADIF1
+        </span>
+      </div>
+      <div class="flex items-center gap-3 mx-4">
+        <button id="darkMode" aria-label="Cambiar a modo oscuro" class="p-2 rounded-xl bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 text-slate-700 dark:text-zinc-300 hover:text-emerald-500 hover:bg-slate-200 dark:hover:bg-zinc-800 transition dark:hidden shadow-sm cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <button id="lightMode" aria-label="Cambiar a modo claro" class="p-2 rounded-xl bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 text-slate-700 dark:text-zinc-300 hover:text-amber-400 hover:bg-slate-200 dark:hover:bg-zinc-800 transition hidden dark:block shadow-sm cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="flex-1 max-w-[90rem] p-4 sm:p-7 w-full mx-auto flex flex-col md:flex-row gap-6 items-start">
+    <aside class="w-full md:w-72 bg-white/70 dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 p-5 backdrop-blur-md shadow-xl shrink-0 md:sticky md:top-20 rounded-2xl transition-all duration-300 animate-fadeIn">
+      <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-200 dark:border-zinc-800">
+        <h2 class="text-xs font-bold tracking-wider uppercase text-slate-700 dark:text-zinc-200 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Áreas de Estudio
+        </h2>
+        <span id="areas-disponibles" class="text-[10px] bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2.5 py-0.5 rounded-full font-semibold border border-emerald-200 dark:border-emerald-500/20"></span>
+      </div>
+      <nav id="areas-estudio" class="space-y-1.5"></nav>
+    </aside>
+    <main id="principal" class="flex-1 w-full bg-white/70 dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-xl dark:shadow-2xl flex flex-col justify-between transition-all duration-300 animate-fadeIn">
+      <div id="catalogo" class="">
+        <div class="mb-6">
+          <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Catálogo de Cursos
+          </h2>
+          <p class="text-base text-slate-600 dark:text-zinc-400 mt-2">
+            Explora las opciones de áreas de estudio y selecciona un tema para comenzar.
+          </p>
+        </div><div id="resultados-cursos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+      </div>
+    </main>
+  </div>
+  <script src="./js/darkmode.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
